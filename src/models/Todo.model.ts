@@ -21,6 +21,6 @@ const TodoSchema : Schema<Todos> = new Schema({
     }
 })
 
-const TodoModel = (mongoose.models.Todos as mongoose.Model<Todos>) || (mongoose.model<Todos>("User" , TodoSchema));
+const TodoModel = (mongoose.models.Todos as mongoose.Model<Todos>) || (mongoose.model<Todos>("Todo" , TodoSchema));
 
 export default TodoModel;
