@@ -9,7 +9,6 @@ export interface User extends Document{
     verifyCodeExpiry : Date,
     verifyCode : string,
     isVerfied : boolean,
-    todos :  mongoose.Types.ObjectId
 }
 
 const UserSchema : Schema<User> = new Schema({
@@ -46,11 +45,6 @@ const UserSchema : Schema<User> = new Schema({
         default : false
     },
 
-    todos : {
-        type : Schema.Types.ObjectId,
-        ref : "Todo",
-       
-    }
 })
 
 

@@ -2,7 +2,8 @@ import mongoose , {Schema , Document} from "mongoose";
 export interface Todos extends Document{
     isCompeleted : boolean,
     content : string,
-    Priority : "Low" | "Medium" | "High"
+    Priority : "Low" | "Medium" | "High",
+    userId : mongoose.Types.ObjectId
 }
 const TodoSchema : Schema<Todos> = new Schema({
     isCompeleted : {
@@ -18,6 +19,11 @@ const TodoSchema : Schema<Todos> = new Schema({
         type : String,
         enum : ["Low" , "Medium" , "High"],
         default : "Medium"
+    },
+    userId : {
+        type : Schema.Types.ObjectId,
+        ref : "User",
+        required : true
     }
 })
 

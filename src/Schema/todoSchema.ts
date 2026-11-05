@@ -8,10 +8,13 @@ export const TodoSchema = z.object({
     .max(1000 , {message : 'Content must be at most 1000 characters'}),
 
     isCompeleted : z
-    .boolean(),
+    .boolean()
+    .optional(),
 
     Priority : z
     .enum(["Low" , "Medium" , "High"])
+    .optional(),
+
 
 })
 

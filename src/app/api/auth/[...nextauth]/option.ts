@@ -1,4 +1,3 @@
-import { Session } from './../../../../../node_modules/next-auth/core/types.d';
 import dbConnect from "@/lib/dbConnect";
 import UserModel from "@/src/models/user.model";
 import bcrypt from "bcryptjs";
